@@ -30,12 +30,18 @@ namespace WebDriverTests
         {
             var samsungPage = new SamsungPage(driver);
             samsungPage.OpenPage();
-            samsungPage.OpenLoginWindow();
-            samsungPage.InputLogin();
-            samsungPage.InputPasswordAndConfirm();
-            samsungPage.GoToTablets();
+            samsungPage.ViewCarousel();
+            samsungPage.ViewDetails();
 
-            Assert.IsTrue(samsungPage.IsInaccessibilityMessageShown);
+            Assert.IsTrue(samsungPage.IsRedirectedToDetails);
+        }
+
+        [Test]
+        public void Is()
+        {
+            var samsungPage = new SamsungPage(driver);
+            samsungPage.GoToTablets();
+            samsungPage.SortByPrice();
         }
 
     }
