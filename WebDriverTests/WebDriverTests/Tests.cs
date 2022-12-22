@@ -37,7 +37,7 @@ namespace WebDriverTests
         }
 
         [Test]
-        public void Is()
+        public void IsCanSortTabletsByPrice()
         {
             var samsungPage = new SamsungPage(driver);
             samsungPage.GoToTablets();
